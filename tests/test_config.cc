@@ -2,6 +2,7 @@
 #include"../sylar/log.h"
 #include<yaml-cpp/yaml.h>
 
+
 sylar::ConfigVar<int>::ptr g_int_value_config = 
     sylar::Config::Lookup("system.port", (int)8080, "system port");
 
@@ -191,7 +192,7 @@ void test_class() {
     SYLAR_LOG_INFO(SYLAR_LOG_ROOT()) << "after: " << g_person->getValue().toString() 
                                         << " - " << g_person->toString();
     XX_PM(g_person_map, "class.map after");
-    SYLAR_LOG_INFO(SYLAR_LOG_ROOT()) << "after: " << g_person_vec_map->toString();
+   // SYLAR_LOG_INFO(SYLAR_LOG_ROOT()) << "after: " << g_person_vec_map->toString();
 }
 
 void test_log() {
@@ -214,8 +215,8 @@ int  main(int argc, char** argv) {
     //test_yaml();
     //test_config();
 
-    //test_class();
+    test_class();
 
-    test_log();
+    //test_log();
     return 0;
 }
