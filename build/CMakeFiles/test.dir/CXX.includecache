@@ -31,10 +31,30 @@ util.h
 /root/workspace/sylar/sylar/util.h
 singleton.h
 /root/workspace/sylar/sylar/singleton.h
+thread.h
+/root/workspace/sylar/sylar/thread.h
 
 /root/workspace/sylar/sylar/singleton.h
 
+/root/workspace/sylar/sylar/thread.h
+thread
+-
+functional
+-
+memory
+-
+pthread.h
+-
+semaphore.h
+-
+stdint.h
+-
+atomic
+-
+
 /root/workspace/sylar/sylar/util.h
+iostream
+-
 pthread.h
 -
 unistd.h
@@ -46,6 +66,10 @@ sys/syscall.h
 stdio.h
 -
 stdint.h
+-
+vector
+-
+string
 -
 
 /root/workspace/sylar/tests/test.cc

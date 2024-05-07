@@ -4,8 +4,8 @@
 namespace sylar {
 
     //thread_local修饰变量具有线程周期，线程隔离
-    static thread_local Thread* t_thread = nullptr;
-    static thread_local std::string t_thread_name = "UNKNOW";
+    static thread_local Thread* t_thread = nullptr; //当前线程
+    static thread_local std::string t_thread_name = "UNKNOW";   //当前线程名称
     static sylar::Logger::ptr g_logger = SYLAR_LOG_NAME("system");
 
 
@@ -63,7 +63,8 @@ namespace sylar {
             SYLAR_LOG_ERROR(g_logger) << "pthread_create thread fail, rt=" << rt << " name=" << name;
             throw std::logic_error("pthread_create error");
         }
-        m_semaphore.wait();
+        
+        m_semaphore.wait(); //阻塞，直到被创建的线程已经准备好执行
     }
 
     Thread::~Thread() {

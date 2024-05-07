@@ -3,7 +3,10 @@
 
 CMakeFiles/test_thread.dir/tests/test_thread.cc.o
  /root/workspace/sylar/sylar/config.h
+ /root/workspace/sylar/sylar/fiber.h
  /root/workspace/sylar/sylar/log.h
+ /root/workspace/sylar/sylar/macro.h
+ /root/workspace/sylar/sylar/scheduler.h
  /root/workspace/sylar/sylar/singleton.h
  /root/workspace/sylar/sylar/sylar.h
  /root/workspace/sylar/sylar/thread.h
